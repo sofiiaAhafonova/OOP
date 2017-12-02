@@ -13,7 +13,7 @@ namespace lab2
         protected String name;
         protected String surname;
 
-        public String Name { get; set; }
+        public String Name { get { return name; } set { name = value; } }
         public String Surname { get; set; }
         public Person() : base()
         {
@@ -37,7 +37,7 @@ namespace lab2
         }
         public void Birth(Hospital h, BornEventArgs b)
         {
-            Console.WriteLine("I was borned at " + DateTime.Now);
+            Console.WriteLine(b.Name +" was borned at " + b.DateOfBirth);
         }
         public void BodyParams()
         {

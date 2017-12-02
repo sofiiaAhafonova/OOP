@@ -10,9 +10,12 @@ namespace lab2
     {
         static void Main(string[] args)
         {
-            Person p = new Person();
+            Person p = new Person(40, 5, "Stiv", "Ostiin");
             p.Gender = "male";
-            Console.ReadKey();
+           
+            Hospital h = new Hospital();
+            h.Birth(p);
+ Console.ReadKey();
         }
     }
 }
