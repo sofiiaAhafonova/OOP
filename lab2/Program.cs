@@ -11,7 +11,8 @@ namespace lab2
         static void Main(string[] args)
         {
             Person p = new Person();
-            p.Gender = "male";
+            p.Gender = "masle";
+            Console.ReadKey();
         }
     }
 }

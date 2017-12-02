@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab2
 {
-    interface IPersonality
+    interface IPersonality<T> where T : Person
     {
         String Name { get; set; }
 

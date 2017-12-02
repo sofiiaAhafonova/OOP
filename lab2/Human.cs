@@ -20,6 +20,7 @@ namespace lab2
             gender = "male";
             age = 27;
         }
+
         public Human(int height, int weight, int age)
         {
             this.height = height;
@@ -32,6 +33,22 @@ namespace lab2
             this.height = height;
             this.weight = weight;
         }
+        public int Weight {
+            get { return weight; }
+            set {
+                if (value < 3 || value > 300)
+                    throw new ArgumentOutOfRangeException("Invalid weight");
+                weight = value;
+            }
+        }
+        public int Height {
+            get { return height; }
+            set {
+                if (value < 50 || value > 250)
+                    throw new ArgumentOutOfRangeException("Invalid height");
+                height = value;
+            }
+        }
         public string Gender
         {
             get { return gender; }
@@ -40,7 +57,7 @@ namespace lab2
                 if (value.ToLower() == "male" || value.ToLower() == "female")
                     this.gender = value;
                 else
-                    throw new ArgumentOutOfRangeException(value);
+                    throw new InvalidArgException(" is not a gender", value);
             }
         }
 

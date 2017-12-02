@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace lab2
 {
 
-    class Person : Human, IPersonality, IComparable<Person>
+    class Person : Human, IPersonality<Person>, IComparable<Person>, IHumanBeing<Person>
     {
 
         protected String name;
@@ -38,6 +38,10 @@ namespace lab2
            return ("My name is" + name + " " + surname);
         }
 
+        public void BodyParams()
+        {
+            Console.WriteLine($"Weight :{weight} kg; height: {height} cm");
+        }
         //compares two Person's surnames and names and returns int that 
         //indicates their relative position in the sort order
         public int CompareTo(Person other)

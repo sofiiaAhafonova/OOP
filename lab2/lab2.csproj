@@ -42,7 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArgumentOutOfRangeException.cs" />
+    <Compile Include="IHumanBeing.cs" />
+    <Compile Include="InvalidArgException.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="IPersonality.cs" />
     <Compile Include="Person.cs" />
