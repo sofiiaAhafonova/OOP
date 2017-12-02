@@ -9,7 +9,11 @@ namespace lab2
     interface IPersonality
     {
         String Name { get; set; }
+
         String Surname { get; set; }
+
         String PersonalInfo();
+
+        void Introduction();
     }
 }

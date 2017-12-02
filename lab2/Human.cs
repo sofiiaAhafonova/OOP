@@ -11,7 +11,6 @@ namespace lab2
         private string gender;
         protected int height;
         protected int weight;
-
         protected int age;
 
         public Human()
@@ -20,7 +19,6 @@ namespace lab2
             weight = 75;
             gender = "male";
             age = 27;
-
         }
         public Human(int height, int weight, int age)
         {
@@ -42,16 +40,10 @@ namespace lab2
                 if (value.ToLower() == "male" || value.ToLower() == "female")
                     this.gender = value;
                 else
-                    throw new ArgumentOutOfRangeException(
-                    "Gender must be only male or female!");
+                    throw new ArgumentOutOfRangeException(value);
             }
         }
 
         public abstract void Introduction();
-        public void PrintChars()
-        {
-            Console.WriteLine("Height :{0}, weight:{1}, age:{2}, gender: {3}", height, weight, age, gender);
-        }
-
     }
 }

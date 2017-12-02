@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace lab2
 {
 
-    public class Person : Human, IPersonality, IComparable<Person>
+    class Person : Human, IPersonality, IComparable<Person>
     {
 
         protected String name;
