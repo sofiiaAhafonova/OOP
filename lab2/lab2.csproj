@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BornEventArgs.cs" />
+    <Compile Include="Hospital.cs" />
     <Compile Include="IHumanBeing.cs" />
     <Compile Include="InvalidArgException.cs" />
     <Compile Include="Human.cs" />

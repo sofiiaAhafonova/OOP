@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace lab2
 {
-
-    class Person : Human, IPersonality<Person>, IComparable<Person>, IHumanBeing<Person>
+    //delegate void PersonBirth(Hospital hosp, BornEventArgs e);
+    public class Person : Human, IPersonality<Person>, IComparable<Person>, IHumanBeing<Person>
     {
-
+        
         protected String name;
         protected String surname;
 
         public String Name { get; set; }
         public String Surname { get; set; }
-       
         public Person() : base()
         {
             name = "John";
@@ -28,7 +27,6 @@ namespace lab2
             this.name = name;
             this.surname = surname;
         }
-
         public override void Introduction()
         {
             Console.WriteLine($"Hello, I'm {name} {surname}, my height is {height} and weight {weight}");
@@ -37,7 +35,10 @@ namespace lab2
         {
            return ("My name is" + name + " " + surname);
         }
-
+        public void Birth(Hospital h, BornEventArgs b)
+        {
+            Console.WriteLine("I was borned at " + DateTime.Now);
+        }
         public void BodyParams()
         {
             Console.WriteLine($"Weight :{weight} kg; height: {height} cm");

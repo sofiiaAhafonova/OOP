@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab2
 {
-    abstract class Human
+    public abstract class Human
     {
         private string gender;
         protected int height;
