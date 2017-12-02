@@ -29,6 +29,10 @@ namespace lab2
             this.surname = surname;
         }
 
+        public override void Introduction()
+        {
+            Console.WriteLine($"Hello, I'm {name} {surname}, my height is {height} and weight {weight}");
+        }
         public String PersonalInfo()
         {
            return ("My name is" + name + " " + surname);

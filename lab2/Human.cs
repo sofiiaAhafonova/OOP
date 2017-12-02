@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab2
 {
-    public class Human
+    abstract class Human
     {
         private string gender;
         protected int height;
@@ -47,10 +47,7 @@ namespace lab2
             }
         }
 
-        public virtual void Introduction()
-        {
-            Console.WriteLine("Hello! I'm a Human. I'm  the crown of creation!");
-        }
+        public abstract void Introduction();
         public void PrintChars()
         {
             Console.WriteLine("Height :{0}, weight:{1}, age:{2}, gender: {3}", height, weight, age, gender);
